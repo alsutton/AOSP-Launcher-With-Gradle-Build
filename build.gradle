@@ -10,7 +10,9 @@ buildscript {
     }
 }
 
-final String ANDROID_TOP = "${rootDir}/../../.."
+// For local builds we use the root dir as the top of the android build and then
+// create replica directories below it.
+final String ANDROID_TOP = "${rootDir}"
 final String FRAMEWORK_PREBUILTS_DIR = "${ANDROID_TOP}/prebuilts/framework_intermediates/"
 
 apply plugin: 'com.android.application'
